@@ -25,6 +25,24 @@ python3 -m http.server 8080
 # then open http://localhost:8080
 ```
 
+## Android APK
+
+A signed release APK is attached to this repo's Releases page:
+**`night-racer.apk`** — ~27 MB, `arm64-v8a`, Android 7.0 (API 24) and newer.
+Copy it to your phone and open it; allow "install unknown apps" for your browser
+or file manager when prompted.
+
+To build it yourself you need the **Android SDK** (build-tools + platform-tools)
+and a **JDK 17**. Point Godot's *Editor Settings → Export → Android* at them, then:
+
+```bash
+godot --headless --path . --export-release "Android" build/night-racer.apk
+```
+
+The `Android` export preset is already in `export_presets.cfg` (arm64-v8a,
+package `com.pocketagent.nightracer`). ETC2/ASTC texture compression is enabled
+in `project.godot` because Android export requires it.
+
 ## Controls
 
 | Action | Keys |
