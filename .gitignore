@@ -1,0 +1,8 @@
+# Godot editor cache
+.godot/
+
+# Exported builds
+build/
+*.pck
+*.exe
+*.apk
